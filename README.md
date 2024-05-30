@@ -12,6 +12,7 @@ MS SQL Server
 
 
 **Setup**
+
 Clone the repository:
 ```bash
 git clone https://github.com/yourusername/AtonAPI.git
@@ -39,6 +40,7 @@ Login to Get Token:
 Call the login endpoint with credentials admin / admin to get a JWT token.
 
 ```json
+
 POST /login
 {
     "login": "admin",
@@ -49,7 +51,7 @@ Copy the token from the response.
 Authorize in Swagger UI:
 
 Click the "Authorize" button in Swagger UI.
-Enter the token in the format: Bearer <token>.
+Enter the token in the format: Bearer 'token'.
 
 **Notes**
 
