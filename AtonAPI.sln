@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtonAPI", "AtonAPI\AtonAPI.csproj", "{6FC64201-9FCB-4053-899E-FEF9A34476C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtonAPI", "AtonAPI\AtonAPI.csproj", "{6FC64201-9FCB-4053-899E-FEF9A34476C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtonAPI.Data", "AtonAPI.Database\AtonAPI.Data.csproj", "{A335EBA8-7B67-4B63-813E-DE582277B25F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtonAPI.Services", "AtonApi.Services\AtonAPI.Services.csproj", "{5D1255B9-FC6E-49C5-8C21-F6839A3A02DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6FC64201-9FCB-4053-899E-FEF9A34476C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC64201-9FCB-4053-899E-FEF9A34476C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC64201-9FCB-4053-899E-FEF9A34476C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A335EBA8-7B67-4B63-813E-DE582277B25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A335EBA8-7B67-4B63-813E-DE582277B25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A335EBA8-7B67-4B63-813E-DE582277B25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A335EBA8-7B67-4B63-813E-DE582277B25F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1255B9-FC6E-49C5-8C21-F6839A3A02DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1255B9-FC6E-49C5-8C21-F6839A3A02DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1255B9-FC6E-49C5-8C21-F6839A3A02DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1255B9-FC6E-49C5-8C21-F6839A3A02DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
