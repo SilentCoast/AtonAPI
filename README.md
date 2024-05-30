@@ -52,6 +52,9 @@ Authorize in Swagger UI:
 
 Click the "Authorize" button in Swagger UI.
 Enter the token in the format: Bearer 'token'.
+```Token
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwianRpIjoiMjFlMTk2Y2UtMTcxNy00MDVhLWExMWUtMjIzMjBjZTBhMjFhIiwiZXhwIjoxNzE3OTI0NTE5LCJpc3MiOiJodHRwczovL3RoYXRndXkuY29tIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwOCJ9.qNo45gk9K68MFbEQnQ68ymyfEO_ux-Vb_KQuD2Rclhw
+```
 
 **Notes**
 
