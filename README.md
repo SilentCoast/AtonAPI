@@ -8,9 +8,9 @@ MS SQL Server
 Setup
 Clone the repository:
 ```bash
-Copy code
 git clone https://github.com/yourusername/AtonAPI.git
 cd AtonAPI
+```
 Import the Database:
 
 Locate the SQL script in the repository and execute it to create the necessary database and tables in your MS SQL Server.
@@ -22,7 +22,7 @@ Copy code
 "ConnectionStrings": {
     "DefaultConnection": "Server=your_server;Database=your_database;User Id=your_user;Password=your_password;"
 }
-
+```
 Run the API
 
 *Authentication*
@@ -36,6 +36,7 @@ POST /login
     "login": "admin",
     "password": "admin"
 }
+```
 Copy the token from the response.
 Authorize in Swagger UI:
 
