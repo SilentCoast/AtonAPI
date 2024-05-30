@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AtonAPI.Database;
+namespace AtonAPI.Data;
 
 public partial class User
 {
@@ -15,7 +15,7 @@ public partial class User
 
     public string Name { get; set; }
 
-    public int GenderId { get; set; }
+    public int Gender { get; set; }
 
     public DateTime? Birthday { get; set; }
 

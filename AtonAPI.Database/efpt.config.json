@@ -8,16 +8,12 @@
    "OutputContextPath": null,
    "OutputPath": "",
    "PreserveCasingWithRegex": true,
-   "ProjectRootNamespace": "AtonAPI.Database",
+   "ProjectRootNamespace": "AtonAPI.Data",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 2,
    "SelectedToBeGenerated": 0,
    "T4TemplatePath": null,
    "Tables": [
-      {
-         "Name": "[dbo].[Genders]",
-         "ObjectType": 0
-      },
       {
          "Name": "[dbo].[Users]",
          "ObjectType": 0

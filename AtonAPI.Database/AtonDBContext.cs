@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace AtonAPI.Database;
+namespace AtonAPI.Data;
 
 public partial class AtonDBContext : DbContext
 {
@@ -13,19 +13,10 @@ public partial class AtonDBContext : DbContext
     {
     }
 
-    public virtual DbSet<Gender> Genders { get; set; }
-
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Gender>(entity =>
-        {
-            entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
-        });
-
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Guid).HasName("PK__Users__A2B5777CF43803CA");
