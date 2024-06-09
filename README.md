@@ -13,17 +13,16 @@ MS SQL Server
 
 **Setup**
 
-Clone the repository:
+*Clone the repository:*
 ```bash
 git clone https://github.com/SilentCoast/AtonAPI.git
 cd AtonAPI
 ```
-Import the Database:
+*Import the Database:*
 
 Locate the 'AtonDB.sql' SQL script in the repository and execute it to create the necessary database and tables in your MS SQL Server.
 
-
-Configure Connection String:
+*Configure Connection String:*
 
 Open appsettings.json and adjust the connection string to match your MS SQL Server configuration.
 ```json
@@ -34,7 +33,7 @@ Open appsettings.json and adjust the connection string to match your MS SQL Serv
 Run the API
 
 **Authentication**
-
+---
 Login to Get Token:
 
 Call the login endpoint with credentials admin / admin to get a JWT token.
