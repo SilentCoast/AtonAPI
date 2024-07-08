@@ -1,5 +1,5 @@
-﻿using AtonAPI.Services;
-using AtonAPI.Data.Models;
+﻿using AtonAPI.Data.Models;
+using AtonAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AtonAPI.Controllers
@@ -23,9 +23,9 @@ namespace AtonAPI.Controllers
             bool isValidUser = await _userService.ValidateUserAsync(loginModel.Login, loginModel.Password);
             if (isValidUser)
             {
-                
+
                 (string role, bool success, string errorMessage) result = await _userService.GetUserRoleAsync(loginModel.Login);
-                if(result.success)
+                if (result.success)
                 {
                     var token = _jwtService.GenerateToken(loginModel.Login, result.role);
                     return Ok(new { Token = token });

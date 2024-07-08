@@ -33,7 +33,7 @@ namespace AtonAPI.Controllers
         {
             string createdByLogin = GetCurrentLogin();
 
-            var result = await _userService.CreateUserAsync(model,createdByLogin);
+            var result = await _userService.CreateUserAsync(model, createdByLogin);
             if (!result.success)
             {
                 return BadRequest(result.errorMessage);
@@ -43,7 +43,7 @@ namespace AtonAPI.Controllers
 
         [HttpPut("update/details")]
         [Authorize]
-        public async Task<IActionResult> UpdateDetails([Required]string login, string? name = null, int? gender = null, DateTime? birthDay = null)
+        public async Task<IActionResult> UpdateDetails([Required] string login, string? name = null, int? gender = null, DateTime? birthDay = null)
         {
             var result = await _userService.UpdateUserInfoAsync(login, GetCurrentLogin(), name, gender, birthDay);
             if (!result.success)
@@ -106,7 +106,7 @@ namespace AtonAPI.Controllers
         [Authorize]
         public async Task<IActionResult> GetUserByLoginAndPassword(string login, string password)
         {
-            var result = await _userService.GetUserByLoginAndPasswordAsync(login, password,GetCurrentLogin());
+            var result = await _userService.GetUserByLoginAndPasswordAsync(login, password, GetCurrentLogin());
             if (!result.success)
             {
                 return BadRequest(result.errorMessage);
@@ -131,7 +131,7 @@ namespace AtonAPI.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> DeleteUser(string login, bool softDelete = true)
         {
-            var result = await _userService.DeleteUserAsync(login, softDelete,GetCurrentLogin());
+            var result = await _userService.DeleteUserAsync(login, softDelete, GetCurrentLogin());
             if (!result.success)
             {
                 return BadRequest(result.errorMessage);
@@ -143,7 +143,7 @@ namespace AtonAPI.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> RestoreUser(string login)
         {
-            var result = await _userService.RestoreUserAsync(login,GetCurrentLogin());
+            var result = await _userService.RestoreUserAsync(login, GetCurrentLogin());
             if (!result.success)
             {
                 return BadRequest(result.errorMessage);

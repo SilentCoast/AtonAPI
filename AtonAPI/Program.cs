@@ -1,11 +1,11 @@
-using AtonAPI.Services;
 using AtonAPI.Data;
 using AtonAPI.Data.Repositories;
+using AtonAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace AtonAPI
 {
@@ -53,7 +53,7 @@ namespace AtonAPI
 
 
 
-            builder.Services.AddDbContext<AtonDBContext>(options => 
+            builder.Services.AddDbContext<AtonDBContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("AtonDBConnection")));
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();

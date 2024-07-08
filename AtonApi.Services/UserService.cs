@@ -18,7 +18,7 @@ namespace AtonAPI.Services
             try
             {
                 var user = _userRepository.GetUserByLogin(login);
-                if(user != null)
+                if (user != null)
                 {
                     UserDTO userDTO = new UserDTO
                     {
@@ -64,7 +64,7 @@ namespace AtonAPI.Services
         /// <param name="targetLogin">login of a user to be modified</param>
         /// <param name="modifyingByLogin">user that performs modification</param>
         /// <returns></returns>
-        private (bool success, string errorMessage) CheckAccess(string targetLogin,string modifyingByLogin)
+        private (bool success, string errorMessage) CheckAccess(string targetLogin, string modifyingByLogin)
         {
             User modifyingBy = _userRepository.GetUserByLogin(modifyingByLogin);
             if (modifyingBy != null)
@@ -117,7 +117,7 @@ namespace AtonAPI.Services
                 {
                     user.Birthday = (DateTime)birthDay;
                 }
-                
+
                 _userRepository.UpdateUserInfo(user, modifiedByLogin);
                 return (true, null);
             }
@@ -181,10 +181,10 @@ namespace AtonAPI.Services
         {
             try
             {
-                if(modifiedByLogin == login)
+                if (modifiedByLogin == login)
                 {
                     User modUser = _userRepository.GetUserByLogin(modifiedByLogin);
-                    if(modUser != null)
+                    if (modUser != null)
                     {
                         if (modUser.RevokedOn == null)
                         {
@@ -247,7 +247,7 @@ namespace AtonAPI.Services
             }
         }
 
-        
+
         public async Task<bool> ValidateUserAsync(string login, string password)
         {
             try
@@ -269,18 +269,17 @@ namespace AtonAPI.Services
         }
         public async Task<(string role, bool success, string errorMessage)> GetUserRoleAsync(string login)
         {
-            
+
             User user = _userRepository.GetUserByLogin(login);
             if (user != null)
             {
-                
-                return(user.Admin ? "Admin" : "User",true,null);
+
+                return (user.Admin ? "Admin" : "User", true, null);
             }
             else
             {
-                return(null, false,$"User with login:{login} not found");
+                return (null, false, $"User with login:{login} not found");
             }
         }
     }
-
 }

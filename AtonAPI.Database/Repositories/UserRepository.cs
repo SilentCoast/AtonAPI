@@ -37,7 +37,7 @@
 
             _context.SaveChanges();
         }
-        
+
 
         public void UpdateUserPassword(string login, string newPassword, string modifiedBy)
         {
@@ -77,7 +77,7 @@
                 .ToList();
         }
 
-        
+
         public List<User> GetUsersOlderThan(int age)
         {
             var dateThreshold = DateTime.UtcNow.AddYears(-age);
@@ -118,6 +118,6 @@
             _context.SaveChanges();
         }
 
-        
+
     }
 }
